@@ -1,0 +1,374 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="m_Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">
+ 
+    </asp:PlaceHolder>
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script async src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script async src="Scripts/jquery.easing-1.3.min.js" type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+<script async src="Scripts/modernizr-2.6.2.js" type="text/javascript">
+</script>
+<link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script async src="Content/dist/js/material.js" type="text/javascript"></script>
+<link rel="stylesheet/less" href="Content/dist/css/variables.less" type="text/css" />
+<link rel="stylesheet/less" href="Content/dist/css/bootswatch.less" type="text/css" />
+<script async src="Content/dist/js/material.min.js" type="text/javascript"></script>
+   
+    
+    <!-- Add theme scripts -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css">
+<script async src="content/dist/js/app.js" type="text/javascript"></script>
+<script async src="Scripts/classie.js" type="text/javascript"></script>
+<script async src="Scripts/gnmenu.js" type="text/javascript"></script>
+<script src="Scripts/modernizr.custom.js" type="text/javascript"></script>
+<link href="Content/dist/css/AdminLTE.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material-fullpalette.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material-fullpalette.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/ripples.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/ripples.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/roboto.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/roboto.min.css" rel="stylesheet" type="text/css">
+<script src="Content/dist/js/ripples.js" type="text/javascript"></script>
+<script src="Content/dist/js/ripples.min.js" type="text/javascript"></script>
+<script src="Content/dropdown.js" type="text/javascript"></script>
+
+<script src="Scripts/jsrender.min.js" type="text/javascript"></script>
+<script src="Scripts/jquery.easing-1.3.min.js" type="text/javascript"></script>
+<script src="Scripts/jquery.globalize.min.js" type="text/javascript"></script>
+<script src="Scripts/globalize.culture.en-US.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css">
+<script src="Scripts/classie.js" type="text/javascript"></script>
+<script src="Scripts/gnmenu.js" type="text/javascript"></script>
+<script src="Scripts/modernizr.custom.js" type="text/javascript"></script>
+<link href="Content/dist/css/material-fullpalette.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material-fullpalette.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/material.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/ripples.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/ripples.min.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/roboto.css" rel="stylesheet" type="text/css">
+<link href="Content/dist/css/roboto.min.css" rel="stylesheet" type="text/css">
+<script src="Content/dist/js/material.js" type="text/javascript"></script>
+<script src="Content/dist/js/material.min.js" type="text/javascript"></script>
+<script src="Content/dist/js/ripples.js" type="text/javascript"></script>
+<script src="Content/dist/js/ripples.min.js" type="text/javascript"></script>
+        <style>
+body {
+    overflow: auto!important;
+
+}
+
+
+            #scrollcontainer .vScroll
+            {
+                width: 8px;
+                position: relative;
+                right: 3px;
+                display: none;
+            }
+            
+            #scrollcontainer .button
+            {
+                visibility: hidden;
+            }
+            
+            #scrollcontainer .vHandle
+            {
+                border-radius: 4px;
+            }
+           .moveAway {
+              padding: 24px;
+              float: none;
+              color: grey;
+              margin-bottom: 5px;
+              padding-top: 15px;
+              position: relative;
+              top: 4px;
+}
+
+            #scrollcontainer .vScroll
+            {
+                width: 8px;
+                position: relative;
+                right: 3px;
+                display: none;
+            }
+            
+            #scrollcontainer .button
+            {
+                visibility: hidden;
+            }
+            
+            #scrollcontainer .vHandle
+            {
+                border-radius: 4px;
+            }
+           .moveAway {
+              padding: 24px;
+              float: none;
+              color: grey;
+              margin-bottom: 5px;
+              padding-top: 15px;
+              position: relative;
+              top: 4px;
+}
+h #floating-action-button .btn {
+    margin: 20px;
+  }
+  #floating-action-button h2 {
+    padding: 14px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+
+ div.c1 {width: 20%}
+        </style>
+</head>
+    <body id="bodyStart"> 
+<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+  
+</asp:ContentPlaceHolder>
+   <header class="main-header container-fluid">   <!-- Logo -->
+  <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">        
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 4 messages</li>
+                  <li>
+                    <!-- inner menu: contains the messages -->
+                    <ul class="menu">
+                      <li><!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <!-- User Image -->
+                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          </div>
+                          <!-- Message title and timestamp -->
+                          <h4>                            
+                            Support Team
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <!-- The message -->
+                          <p></p>
+                        </a>
+                      </li><!-- end message -->                      
+                    </ul><!-- /.menu -->
+                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
+                </ul>
+              </li><!-- /.messages-menu -->
+
+              <!-- Notifications Menu -->
+              <li class="dropdown notifications-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <!-- Inner Menu: contains the notifications -->
+                    <ul class="menu">
+                      <li><!-- start notification -->
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i>
+                        </a>
+                      </li><!-- end notification -->                      
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+              <!-- Tasks Menu -->
+              <li class="dropdown tasks-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 9 tasks</li>
+                  <li>
+                    <!-- Inner menu: contains the tasks -->
+                    <ul class="menu">
+                      <li><!-- Task item -->
+                        <a href="#">
+                          <!-- Task title and progress text -->
+                          <h3>
+                          
+                            <small class="pull-right">20%</small>
+                          </h3>
+                          <!-- The progress bar -->
+                          <div class="progress xs">
+                            <!-- Change the css width attribute to simulate progress -->
+                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                              <span class="sr-only">20% Complete</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li><!-- end task item -->                      
+                    </ul>
+                  </li>
+                  <li class="footer">
+                    <a href="#">View all tasks</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- User Account Menu -->
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <!-- The user image in the navbar-->
+                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                  <span class="hidden-xs">Stephan Maree</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- The user image in the menu -->
+                  <li class="user-header">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <p>
+                      Stephan Maree - Web Developer
+                      <small>Member since Nov. 2012</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#"></a>
+                    </div>
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>   
+<div class="container-fluid">
+        	<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search">
+									<i class="fa fa-search"></i>
+								</li>
+								<li>									
+									<ul class="gn-submenu">
+										<li><i class="mdi-social-group-add"></i><a href="http://legalprocess.azurewebsites.net/p_ManageClients.aspx">Manage Users</a> </li>
+										<li><i class="mdi-file-folder-open"></i>Manage Documents</li>
+									</ul>
+								</li>
+								<li><i class="mdi-av-equalizer"></i>Latest Activity</li>
+								<li id="manageProfile"><i class="mdi-communication-business"></i>Manage Profile Settings</li>
+								<li>
+									<ul class="gn-submenu">
+										<li><i class="mdi-hardware-headset-mic"></i><a href="http://legalprocess.azurewebsites.net/support/Support.aspx">Support</a></li>
+										<li><i class="mdi-image-image-aspect-ratio"></i><a href="http://legalprocess.azurewebsites.net/About.aspx">About</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+			</ul>
+    
+    <form runat="server">
+
+
+      
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+             <footer>
+            
+            </footer>
+        </div>
+
+            <div id="content">
+                <asp:ContentPlaceHolder ID="LayoutSection" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+    </form>
+
+      <asp:ContentPlaceHolder ID="DialogBody" runat="server">
+                
+      </asp:ContentPlaceHolder>
+
+       
+
+       
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function samplepageload() {
+                $("#controlarea").css('visibility', 'visible');
+            }
+        </script>
+        <script>
+            new gnMenu(document.getElementById('gn-menu'));
+		</script>
+        <script>
+      $('li i').addClass('moveAway');
+
+     
+       </script>
+        <script>
+               $('#manageProfile').live('click', function() {
+                    $('#manageProfile li').attr('href', 'ClientProfile.aspx');
+                });           
+
+        </script>
+
+        <script>
+            $('ul.gn-submenu li a').addClass('navMove');
+        </script>
+    
+   </div>
+
+</div>
+   
+</body>
+</html>

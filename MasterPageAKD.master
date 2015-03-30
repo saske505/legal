@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPageAKD.master.cs" Inherits="MasterPageAKD" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+        <asp:ContentPlaceHolder ID="HeadSection" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ScriptSection" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="StyleSection" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="LayoutSection" runat="Server">
+    <div id="controlarea" class="control-panel cols-content-fluid" style="visibility: visible;">
+        <div class="row">
+            <div class="cols-iframe">
+                <div>
+                    <div class="sampleheadingtext">
+                        <asp:ContentPlaceHolder ID="SampleHeading" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <%--<div class="content-container-fluid">
+                    <div class="row">
+                        <div id="maincontrolarea" class="cols-sample-area" runat="server">
+                            <div>
+                                <ej:Button CssClass="prev metroblue" ID="Prev" ClientIDMode="Static" runat="server" Type="Button" ContentType="ImageOnly" PrefixIcon="e-rarrowleft-2x" Size="Mini" ClientSideOnClick="onleftnavigationclick" ClientSideOnCreate="navbtnoncreate" />
+                                <ej:Button CssClass="next metroblue" ID="Next" ClientIDMode="Static" runat="server" Type="Button" PrefixIcon="e-rarrowright-2x" ContentType="ImageOnly" Size="Mini" ClientSideOnClick="onrightnavigationclick" ClientSideOnCreate="navbtnoncreate" />
+                                <asp:ContentPlaceHolder ID="ControlsSection" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                        <asp:ContentPlaceHolder ID="PropertySection" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="EventSection" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cols-source sourcecodeTab">
+                <%-- <Sync:Sourcetab ID="codeviewtab" runat="server" />--%>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function navbtnoncreate(sender, args) {
+            $("#Prev, #Next").css("display", "none");
+        }
+    </script>--%>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="BodyContent" runat="Server">
+  
+
+          <header>
+    <a href="http://AKD.co.za/"><img id="image_Logo" height="45" src="images/logo.png" alt="Logo" /></a>
+        <button id="btn_login"><a href="http://AKD.co.za/user/login" class="">Login</a></button>
+    <button id="btn_reg"><a href="http://AKD.co.za/site/register" class="">Signup</a></button>
+
+        <button id="btn_SideBar" class="ir">
+        Menu</button>
+</header>
+<!------------------------------------------------------ Main Left Menue -------------------------------------------------------------------->
+
+<!------------------------------------------------------ Sub Menues -------------------------------------------------------------------->
+
+<!------------------------------------------------------------------- Main Screen --------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------ Scripts -------------------------------------------------------------------->
+            
+</section>
+		<script src="themes/cmajor/js/library/jquery.easing.1.3.js"></script>
+        <script src="themes/cmajor/js/plugins.js"></script>
+        <script src="themes/cmajor/js/scripts.js"></script>
+        
+        
+        <script src="themes/cmajor/js/library/footable.js"></script>
+        <script src="themes/cmajor/js/library/footable.sort.min.js"></script>
+        <script src="themes/cmajor/js/library/footable.filter.min.js"></script>
+        <script src="themes/cmajor/js/library/footable.paginate.min.js"></script>
+        <script src="themes/cmajor/js/library/easyResponsiveTabs.js"></script>
+        <script src="themes/cmajor/js/library/owl.carousel.js"></script>
+        
+        <script type="text/javascript" src="assets/a009c462/jui/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/bfaf8aa0/gridview/jquery.yiigridview.js"></script>
+        <script type="text/javascript">
+            /*<![CDATA[*/
+            jQuery(function ($) {
+                jQuery('#User_location').autocomplete({
+                    'minLength': '3', 'source': '/location/usersAutoComplete', 'focus': function (event, ui) {
+                        $("#User_location").val(ui.item.label);
+                        return false;
+                    }, 'select': function (event, ui) {
+                        $("#User_location").val(ui.item.label);
+                        $("#Location_id").val(ui.item.id);
+                    }
+                });
+                jQuery('#user-grid').yiiGridView({
+                    'ajaxUpdate': ['user-grid'], 'ajaxVar': 'ajax', 'pagerClass': 'pagination', 'loadingClass': 'grid-view-loading', 'filterClass': 'filters',
+                    'tableClass': 'table', 'selectableRows': 1, 'enableHistory': false, 'updateSelector': '{page}, {sort}', 'filterSelector': '.filter', 'pageVar': 'User_page'
+                });
+            });
+            /*]]>*/
+</script>
+
+
+</asp:Content>
+

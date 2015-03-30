@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/m_Site.master" AutoEventWireup="true" CodeFile="m_AKDMaster.master.cs" Inherits="m_AKDMaster" %>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="Server">
+   <%-- <div id="topNav" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" style="color: #0000FF; font-size: x-large;" >AKD</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" href="~/About">About</a></li>
+                    </ul>
+                     <ul class="nav navbar-nav navbar-left">
+                        <li><a runat="server" href="~/p_ManageClients">Clients</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Home">Logout</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                       
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>--%>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeadSection" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ScriptSection" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="StyleSection" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+<asp:Content ID="Content4" ContentPlaceHolderID="DialogBody" runat="server">
+   
+<!------------------------------------------------------ Main Left Menue -------------------------------------------------------------------->
+<!------------------------------------------------------ Sub Menues -------------------------------------------------------------------->
+<!------------------------------------------------------------------- Main Screen --------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------ Scripts -------------------------------------------------------------------->
+            
+
+		<script src="themes/cmajor/js/library/jquery.easing.1.3.js"></script>
+        <script src="themes/cmajor/js/plugins.js"></script>
+        <script src="themes/cmajor/js/scripts.js"></script>
+        
+        
+        <script src="themes/cmajor/js/library/footable.js"></script>
+        <script src="themes/cmajor/js/library/footable.sort.min.js"></script>
+        <script src="themes/cmajor/js/library/footable.filter.min.js"></script>
+        <script src="themes/cmajor/js/library/footable.paginate.min.js"></script>
+        <script src="themes/cmajor/js/library/easyResponsiveTabs.js"></script>
+        <script src="themes/cmajor/js/library/owl.carousel.js"></script>
+        
+        <script type="text/javascript" src="assets/a009c462/jui/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/bfaf8aa0/gridview/jquery.yiigridview.js"></script>
+        <script type="text/javascript">
+            /*<![CDATA[*/
+            jQuery(function ($) {
+                jQuery('#User_location').autocomplete({
+                    'minLength': '3', 'source': '/location/usersAutoComplete', 'focus': function (event, ui) {
+                        $("#User_location").val(ui.item.label);
+                        return false;
+                    }, 'select': function (event, ui) {
+                        $("#User_location").val(ui.item.label);
+                        $("#Location_id").val(ui.item.id);
+                    }
+                });
+                jQuery('#user-grid').yiiGridView({
+                    'ajaxUpdate': ['user-grid'], 'ajaxVar': 'ajax', 'pagerClass': 'pagination', 'loadingClass': 'grid-view-loading', 'filterClass': 'filters',
+                    'tableClass': 'table', 'selectableRows': 1, 'enableHistory': false, 'updateSelector': '{page}, {sort}', 'filterSelector': '.filter', 'pageVar': 'User_page'
+                });
+            });
+            /*]]>*/
+</script>
+
+
+    <asp:ContentPlaceHolder ID="DialogContainer" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="LayoutSection" runat="server">
+        <div id="controlarea" class="control-panel cols-content-fluid" style="visibility: visible;">
+            <div class="row">
+                <div class="cols-iframe">
+                    <div>
+                        <div class="sampleheadingtext">
+                            <asp:ContentPlaceHolder ID="SampleHeading" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+               
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <div class="content-container-fluid">
+                            <div class="row">
+                                <div id="maincontrolarea" class="cols-sample-area" runat="server">
+                                    <div>
+                                          <asp:ContentPlaceHolder ID="ControlsSection" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </div>
+                                <asp:ContentPlaceHolder ID="PropertySection" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <asp:ContentPlaceHolder ID="EventSection" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+               
+                </div>
+
+                <div class="cols-source sourcecodeTab">
+                   <%-- <Sync:Sourcetab ID="codeviewtab" runat="server" />--%>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function navbtnoncreate(sender, args) {
+                $("#Prev, #Next").css("display", "none");
+            }
+
+    </script>
+</asp:Content>

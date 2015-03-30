@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+        <title>grid4</title>
+    </head>
+    <body>
+           <div id="grid2" style="width: 100%; height: 250px;"></div>
+        <script>
+        $(function () {
+    $('#grid4').w2grid({ 
+        name: 'grid4', 
+        show: {
+            selectColumn: true
+        },
+        columns: [                
+            { field: 'recid', caption: 'ID', size: '30px', sortable: true, attr: 'align="center"' },
+            { field: 'lname', caption: 'Last Name', size: '30%', sortable: true },
+            { field: 'fname', caption: 'First Name', size: '30%', sortable: true },
+            { field: 'email', caption: 'Email', size: '40%', sortable: true },
+            { field: 'sdate', caption: 'Start Date', size: '90px', sortable: true },
+        ],
+        records: [
+            { recid: 1, fname: 'John', lname: 'doe', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 2, fname: 'Stuart', lname: 'Motzart', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 3, fname: 'Jin', lname: 'Franson', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 4, fname: 'Susan', lname: 'Ottie', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 5, fname: 'Kelly', lname: 'Silver', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 6, fname: 'Francis', lname: 'Gatos', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 7, fname: 'Mark', lname: 'Welldo', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 8, fname: 'Thomas', lname: 'Bahh', email: 'jdoe@gmail.com', sdate: '4/3/2012' }
+        ]
+    });    
+});
+
+
+</script>
+    </body>
+</html>
